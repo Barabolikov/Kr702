@@ -13,7 +13,11 @@ namespace Kr702
             InitializeComponent();
         }
         MySqlConnection coon = new MySqlConnection("Server=localhost;Database=bd702;port=3306;User Id=root;passvord=");
-
+        int currId = 0, k = 0, i, j;
+        string currPip = "";
+        int currGroup = 0;
+        double currSb = 0;
+        Image imag;
         private void панельІнструментівToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (panel1.Visible == true) panel1.Visible = false;
@@ -79,22 +83,23 @@ namespace Kr702
         {
             tabControl1.SelectedIndex = 1;
         }
-        public void AddRecord(string pip, int group, float sb)
+        public void AddRecord(string pip, int gr, float sb)
         {
             try
             {
                 coon.Open();
-                string query = "INSERT INTO student (id, pip, gr, sb, photo, harakter) VALUES (NULL, @pip, @grpup, NULL, NULL, NULL);";
+                string query = "INSERT INTO student (id, pip, gr, sb, photo, harakter) VALUES (NULL, @pip, @gr, @sb, NULL, NULL);";
+
                 MySqlCommand cmd = new MySqlCommand(query, coon);
                 cmd.Parameters.AddWithValue("@pip", pip);
-                cmd.Parameters.AddWithValue("@group", group);
-               // cmd.Parameters.AddWithValue("@sb", sb);
+                cmd.Parameters.AddWithValue("@gr", gr);
+                cmd.Parameters.AddWithValue("@sb", sb);
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Виникла помилка" + ex.Message);
-                coon.Close();
+
             }
             MessageBox.Show("Запис додано");
             FiilDGV();
@@ -104,10 +109,55 @@ namespace Kr702
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string pip=textBox1.Text;
+            string pip = textBox1.Text;
             int group = Convert.ToInt32(textBox2.Text);
-            float sb= Convert.ToSingle(textBox2.Text);
+            float sb = Convert.ToSingle(textBox3.Text);
             AddRecord(pip, group, sb);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            currId = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+            currPip = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            currGroup = Convert.ToInt32(dataGridView1.CurrentRow.Cells[2].Value);
+            currSb = Convert.ToInt32(dataGridView1.CurrentRow.Cells[3].Value);
+            tabControl1.SelectedIndex = 2;
+            textBox8.Text = currPip;
+            textBox7.Text = currGroup.ToString();
+            textBox6.Text = currSb.ToString();
+
+        }
+        public void EditRecord(int id, string pip, int gr, double sb)
+        {
+            try
+            {
+                coon.Open();
+                string query = "UPDATE student SET pip = @pip, gr = @gr, sb = @sb WHERE id = @id";
+
+                MySqlCommand cmd = new MySqlCommand(query, coon);
+                cmd.Parameters.AddWithValue("@pip", pip);
+                cmd.Parameters.AddWithValue("@gr", gr);
+                cmd.Parameters.AddWithValue("@sb", sb);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Виникла помилка" + ex.Message);
+
+            }
+            MessageBox.Show("Запис відредаговано");
+            FiilDGV();
+            coon.Close();
+            tabControl1.SelectedIndex = 0;
+        }
+        private void button5_Click(object sender, EventArgs e)
+        {
+           
+            currPip = textBox8.Text;
+            currGroup = Convert.ToInt32(textBox7.Text);
+            currSb = Convert.ToSingle(textBox6.Text);
+            EditRecord(currId, currPip, currGroup, currSb);
         }
     }
 }

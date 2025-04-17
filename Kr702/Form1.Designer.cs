@@ -42,6 +42,7 @@
             проПрограмуToolStripMenuItem = new ToolStripMenuItem();
             проАвтораToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
+            button7 = new Button();
             button2 = new Button();
             button1 = new Button();
             statusStrip1 = new StatusStrip();
@@ -49,20 +50,31 @@
             tabPage1 = new TabPage();
             dataGridView1 = new DataGridView();
             tabPage2 = new TabPage();
-            tabPage3 = new TabPage();
-            tabPage4 = new TabPage();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            pictureBox1 = new PictureBox();
-            button3 = new Button();
-            textBox4 = new TextBox();
-            button4 = new Button();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            label4 = new Label();
             label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            button4 = new Button();
+            textBox4 = new TextBox();
+            button3 = new Button();
+            pictureBox1 = new PictureBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
+            tabPage3 = new TabPage();
+            label6 = new Label();
+            label7 = new Label();
+            label8 = new Label();
+            label9 = new Label();
+            button5 = new Button();
+            textBox5 = new TextBox();
+            button6 = new Button();
+            pictureBox2 = new PictureBox();
+            textBox6 = new TextBox();
+            textBox7 = new TextBox();
+            textBox8 = new TextBox();
+            tabPage4 = new TabPage();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             tabControl1.SuspendLayout();
@@ -70,6 +82,8 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -165,12 +179,23 @@
             // 
             // panel1
             // 
+            panel1.Controls.Add(button7);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
             panel1.Location = new Point(0, 27);
             panel1.Name = "panel1";
             panel1.Size = new Size(888, 54);
             panel1.TabIndex = 1;
+            // 
+            // button7
+            // 
+            button7.Location = new Point(486, 15);
+            button7.Name = "button7";
+            button7.Size = new Size(75, 23);
+            button7.TabIndex = 2;
+            button7.Text = "Редагувати";
+            button7.UseVisualStyleBackColor = true;
+            button7.Click += button7_Click;
             // 
             // button2
             // 
@@ -254,69 +279,50 @@
             tabPage2.Text = "Доадати";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // label5
             // 
-            tabPage3.Location = new Point(4, 24);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(741, 414);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "Редагувати";
-            tabPage3.UseVisualStyleBackColor = true;
+            label5.AutoSize = true;
+            label5.Location = new Point(281, 29);
+            label5.Name = "label5";
+            label5.Size = new Size(94, 15);
+            label5.TabIndex = 11;
+            label5.Text = "Характеристика";
             // 
-            // tabPage4
+            // label4
             // 
-            tabPage4.Location = new Point(4, 24);
-            tabPage4.Name = "tabPage4";
-            tabPage4.Size = new Size(741, 414);
-            tabPage4.TabIndex = 3;
-            tabPage4.Text = "Звіти";
-            tabPage4.UseVisualStyleBackColor = true;
+            label4.AutoSize = true;
+            label4.Location = new Point(58, 195);
+            label4.Name = "label4";
+            label4.Size = new Size(35, 15);
+            label4.TabIndex = 10;
+            label4.Text = "Фото";
             // 
-            // textBox1
+            // label3
             // 
-            textBox1.Location = new Point(57, 62);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(165, 23);
-            textBox1.TabIndex = 0;
+            label3.AutoSize = true;
+            label3.Location = new Point(56, 145);
+            label3.Name = "label3";
+            label3.Size = new Size(41, 15);
+            label3.TabIndex = 9;
+            label3.Text = "С. бал";
             // 
-            // textBox2
+            // label2
             // 
-            textBox2.Location = new Point(57, 113);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(165, 23);
-            textBox2.TabIndex = 1;
+            label2.AutoSize = true;
+            label2.Location = new Point(57, 95);
+            label2.Name = "label2";
+            label2.Size = new Size(39, 15);
+            label2.TabIndex = 8;
+            label2.Text = "Група";
             // 
-            // textBox3
+            // label1
             // 
-            textBox3.Location = new Point(57, 163);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(165, 23);
-            textBox3.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Location = new Point(57, 211);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(180, 129);
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
-            // 
-            // button3
-            // 
-            button3.Location = new Point(88, 364);
-            button3.Name = "button3";
-            button3.Size = new Size(121, 23);
-            button3.TabIndex = 4;
-            button3.Text = "Завантажити...";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(278, 46);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(440, 294);
-            textBox4.TabIndex = 5;
+            label1.AutoSize = true;
+            label1.Location = new Point(57, 44);
+            label1.Name = "label1";
+            label1.Size = new Size(61, 15);
+            label1.TabIndex = 7;
+            label1.Text = "Прізвище";
             // 
             // button4
             // 
@@ -329,50 +335,173 @@
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
-            // label1
+            // textBox4
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(57, 44);
-            label1.Name = "label1";
-            label1.Size = new Size(61, 15);
-            label1.TabIndex = 7;
-            label1.Text = "Прізвище";
+            textBox4.Location = new Point(278, 46);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(440, 294);
+            textBox4.TabIndex = 5;
             // 
-            // label2
+            // button3
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(57, 95);
-            label2.Name = "label2";
-            label2.Size = new Size(39, 15);
-            label2.TabIndex = 8;
-            label2.Text = "Група";
+            button3.Location = new Point(88, 364);
+            button3.Name = "button3";
+            button3.Size = new Size(121, 23);
+            button3.TabIndex = 4;
+            button3.Text = "Завантажити...";
+            button3.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // pictureBox1
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(56, 145);
-            label3.Name = "label3";
-            label3.Size = new Size(41, 15);
-            label3.TabIndex = 9;
-            label3.Text = "С. бал";
+            pictureBox1.Location = new Point(57, 211);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(180, 129);
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
-            // label4
+            // textBox3
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(58, 195);
-            label4.Name = "label4";
-            label4.Size = new Size(35, 15);
-            label4.TabIndex = 10;
-            label4.Text = "Фото";
+            textBox3.Location = new Point(57, 163);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(165, 23);
+            textBox3.TabIndex = 2;
             // 
-            // label5
+            // textBox2
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(281, 29);
-            label5.Name = "label5";
-            label5.Size = new Size(94, 15);
-            label5.TabIndex = 11;
-            label5.Text = "Характеристика";
+            textBox2.Location = new Point(57, 113);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(165, 23);
+            textBox2.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(57, 62);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(165, 23);
+            textBox1.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            tabPage3.Controls.Add(label6);
+            tabPage3.Controls.Add(label7);
+            tabPage3.Controls.Add(label8);
+            tabPage3.Controls.Add(label9);
+            tabPage3.Controls.Add(button5);
+            tabPage3.Controls.Add(textBox5);
+            tabPage3.Controls.Add(button6);
+            tabPage3.Controls.Add(pictureBox2);
+            tabPage3.Controls.Add(textBox6);
+            tabPage3.Controls.Add(textBox7);
+            tabPage3.Controls.Add(textBox8);
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new Size(741, 414);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Редагувати";
+            tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(264, 28);
+            label6.Name = "label6";
+            label6.Size = new Size(94, 15);
+            label6.TabIndex = 22;
+            label6.Text = "Характеристика";
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(39, 144);
+            label7.Name = "label7";
+            label7.Size = new Size(41, 15);
+            label7.TabIndex = 21;
+            label7.Text = "С. бал";
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(40, 94);
+            label8.Name = "label8";
+            label8.Size = new Size(39, 15);
+            label8.TabIndex = 20;
+            label8.Text = "Група";
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(40, 43);
+            label9.Name = "label9";
+            label9.Size = new Size(61, 15);
+            label9.TabIndex = 19;
+            label9.Text = "Прізвище";
+            // 
+            // button5
+            // 
+            button5.Font = new Font("Segoe UI", 14F);
+            button5.Location = new Point(384, 345);
+            button5.Name = "button5";
+            button5.Size = new Size(257, 36);
+            button5.TabIndex = 18;
+            button5.Text = "Зберегти запис";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(261, 45);
+            textBox5.Multiline = true;
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(440, 294);
+            textBox5.TabIndex = 17;
+            // 
+            // button6
+            // 
+            button6.Location = new Point(71, 363);
+            button6.Name = "button6";
+            button6.Size = new Size(121, 23);
+            button6.TabIndex = 16;
+            button6.Text = "Завантажити...";
+            button6.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Location = new Point(40, 210);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(180, 129);
+            pictureBox2.TabIndex = 15;
+            pictureBox2.TabStop = false;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(40, 162);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(165, 23);
+            textBox6.TabIndex = 14;
+            // 
+            // textBox7
+            // 
+            textBox7.Location = new Point(40, 112);
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(165, 23);
+            textBox7.TabIndex = 13;
+            // 
+            // textBox8
+            // 
+            textBox8.Location = new Point(40, 61);
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(165, 23);
+            textBox8.TabIndex = 12;
+            // 
+            // tabPage4
+            // 
+            tabPage4.Location = new Point(4, 24);
+            tabPage4.Name = "tabPage4";
+            tabPage4.Size = new Size(741, 414);
+            tabPage4.TabIndex = 3;
+            tabPage4.Text = "Звіти";
+            tabPage4.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -396,6 +525,9 @@
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            tabPage3.ResumeLayout(false);
+            tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -437,5 +569,17 @@
         private TextBox textBox4;
         private Button button3;
         private PictureBox pictureBox1;
+        private Button button7;
+        private Label label6;
+        private Label label7;
+        private Label label8;
+        private Label label9;
+        private Button button5;
+        private TextBox textBox5;
+        private Button button6;
+        private PictureBox pictureBox2;
+        private TextBox textBox6;
+        private TextBox textBox7;
+        private TextBox textBox8;
     }
 }
